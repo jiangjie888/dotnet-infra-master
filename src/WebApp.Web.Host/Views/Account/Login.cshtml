@@ -1,0 +1,72 @@
+﻿@model WebApp.WebCore.Models.Account.LoginClientModel
+@{
+    ViewData["Title"] = "Login";
+}
+@section Styles
+    {
+    <link href="~/css/login.css" rel="stylesheet" />
+}
+@section Scripts
+    {
+    <script src="~/js/Account/login.js"></script>
+}
+
+@*<h2>Login @Model.ReturnUrl</h2>*@
+
+    <div id="login-container">
+        <div id="left" class="col-md-9">
+            <video style="width:100%;position:absolute;left:0;bottom: 0;" src="~/images/bg_video.mp4" autoplay="autoplay" loop="loop" autobuffer>
+                <!--<a href="#">download the video</a>
+            <source src="#" />
+            <source src="#" />-->
+            </video>
+            <img src="~/images/logo.png" class="logo">
+            <img src="~/images/gs.png" class="light">
+        </div>
+        <div id="right" class="col-md-3">
+            <div id="right_header" class="right_header">
+                <img src="~/images/hhl.png"  class="headerImg" />
+                <div class="title">欢迎登陆</div>
+                <p></p>
+            </div>
+            <div id="right_main">
+                <form id="LoginForm" role="form" class="form-horizontal">
+                    <input type="hidden" id="hdClientId" value="@Model.ClientId" />
+                    <input type="hidden" id="hdClientState" value="@Model.ClientState" />
+                    <input type="hidden" id="hdReturnUrl" value="@Model.ReturnUrl" />
+                    <div class="row" style="margin-left: 0px; margin-right: 0px">
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <input type="text" id="username" name="username" placeholder="请输入用户名..." required maxlength="30">
+                                <i class="icon-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0px; margin-right: 0px">
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <input type="password" id="password" name="password" placeholder="请输入登录密码..." required maxlength="18">
+                                <i class="icon-password"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0px; margin-right: 0px; margin-bottom: 30px;">
+                        <div class="form-group">
+                            <div class="checkbox" style="text-align: left;">
+                                <label>
+                                    <input type="checkbox" id="rememberMe">记住密码
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0px; margin-right: 0px; ">
+                        <div class="form-group">
+                            <button id="LoginButton" type="button" class="btn">登 录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="right_footer">智云集思&copy;2018 copyright</div>
+        </div>
+    </div>

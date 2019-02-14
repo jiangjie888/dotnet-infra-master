@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>智云集思智慧城管系统</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/toastr/toastr.css">
+        <link rel="stylesheet" href="~/lib/sweetalert/sweet-alert.css">
+
+        <link rel="stylesheet" href="~/css/main.css" />
+
+        <script src="~/lib/jquery/jquery-2.1.4.js"></script>
+        <script src="~/lib/jquery/jquery.blockUI.js"></script>
+        <script src="~/lib/toastr/toastr.js"></script>
+        <script src="~/lib/sweetalert/sweet-alert.js"></script>
+        <script src="~/Abp/Framework/scripts/utils/ie10fix.js"></script>
+        <script src="~/Abp/Framework/scripts/abp.js"></script>
+        <script src="~/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+        <script src="~/Abp/Framework/scripts/libs/abp.toastr.js"></script>
+        <script src="~/Abp/Framework/scripts/libs/abp.blockUI.js"></script>
+        <script src="~/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
+        <script src="~/Abp/Framework/scripts/libs/abp.spin.js"></script>
+    </environment>
+
+    <!-- 自定义样式 -->
+    @RenderSection("styles", required: false)
+
+    <script type="text/javascript">
+        // 获取应用程序根路径
+        var abp = abp || {}; abp.appPath = "/webapp/"; @*@ApplicationPath;*@
+    </script>
+</head>
+<body>
+    @RenderBody()
+    <!-- 自定义脚本 -->
+    @RenderSection("scripts", required: false)
+
+
+
+
+</body>
+</html>

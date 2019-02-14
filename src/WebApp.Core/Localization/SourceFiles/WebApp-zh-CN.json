@@ -1,0 +1,17 @@
+﻿{
+  "culture": "zh-CN",
+  "texts": {
+    "HomePage": "主页",
+    "About": "关于我们",
+    "Home_Description": "欢迎使用 WebApp...",
+
+    "LoginFailed": "登录失败",
+    "InvalidUserName": "账号不存在",
+    "InvalidPassword": "密码不正确",
+    "InvalidUserNameOrPassword": "账号或密码无效",
+    "CurrentUserDidNotLoginToTheApplication": "当前账号没有登录到系统",
+    "UserIsNotActiveAndCanNotLogin": "账号 {0} 未激活，不能登录.",
+    "AllOfThesePermissionsMustBeGranted": "您没有权限进行此操作",
+    "AtLeastOneOfThesePermissionsMustBeGranted": "您没有权限进行此操作,您至少需要下列权限的其中一项：｛0｝"
+  }
+}

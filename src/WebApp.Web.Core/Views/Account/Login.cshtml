@@ -1,0 +1,67 @@
+﻿@section Styles
+{
+    <link href="~/css/login.css" rel="stylesheet" />
+}
+@section Scripts
+{
+    <script src="~/js/Account/login.js"></script>
+}
+<div class="divcontainer height-p100 width-p100">
+    <div class="conbg">
+        <div class="loginlogo"></div>
+        <div id="LoginArea" class="height-p100" style="margin-top:60px;">
+            <form id="LoginForm" role="form" class="form-horizontal height-p100 padding-20">
+                <div class="login_title margin-bottom-30">用户登录</div>
+                <input type="hidden" id="TenancyName" value="">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="form-group">
+                        <span class="input-icon">
+                            <input type="text" class="form-control" id="EmailAddressInput" name="nEmailAddressInput" placeholder="请输入用户名..." required maxlength="@GeoSG.Entities.Users.User.MaxUserNameLength">
+                            <i class="glyphicon glyphicon-user gray"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12">
+                    <div class="form-group">
+                        <span class="input-icon">
+                            <input type="password" class="form-control" id="PasswordInput" name="nPasswordInput" placeholder="请输入登录密码..." required maxlength="@GeoSG.Entities.Users.User.MaxPasswordLength">
+                            <i class="glyphicon glyphicon-lock gray"></i>
+                        </span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="RememberMeInput">
+                                <span class="ripple"></span>
+                                <span class="text">记住我</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12">
+                    <div class="form-group">
+                        <button id="LoginButton" type="button" class="btn btn-drakblue btn-block"><i class="fa fa-sign-out"></i> 登录</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-sm-12">
+
+                    <div class="form-group">
+                        <div class="bottomtooltip">
+                            支持Chrome、IE11、火狐
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal_loginerror">
+        <div class="modal modal-primary fade" id="modalloginerror" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="loginerrormsg" class="errormsgbox"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
